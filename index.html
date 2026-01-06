@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aertrip</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/media-queries.css">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="preload" as="image" href="./assets/images/flight-discounts-creative.webp">
+    <link rel="preload" as="image" href="./assets/images/hotel-discounts-creative.webp">
+    <link rel="preload" as="image" href="./assets/images/open-to-travel-creative.webp">
+
+</head>
+
+<body>
+
+    <div class="full-width-container">
+        <header>
+            <div class="container">
+                <a href="./index.html" class="logo">
+                    <img src="./assets/images/logo-composed-1.webp" alt="Aertrip Logo">
+                </a>
+                <nav>
+                    <a href="#flight" class="active">Flight</a>
+                    <a href="#hotel">Hotel</a>
+                    <a href="#bus">Bus</a>
+                    <a href="#explore">Explore</a>
+                </nav>
+                <div class="header-right">
+                    <a href="#trips">Trips</a>
+                    <div id="account-settings">
+                        <img src="./assets/images/avatar.webp" alt="User Avatar">
+                    </div>
+                </div>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+
+                <div class="mobile-menu-header">
+                    <img src="./assets/images/logo-composed-1.webp" alt="Logo">
+                    <button class="close-menu" id="closeMenu">✕</button>
+                </div>
+
+                <div class="mobile-account">
+                    <img loading="lazy" src="./assets/images/avatar.webp" alt="Avatar">
+                    <span>Sign In / Sign Up</span>
+                </div>
+
+                <nav class="mobile-nav">
+                    <a href="#flight">Flight</a>
+                    <a href="#hotel">Hotel</a>
+                    <a href="#bus">Bus</a>
+                    <a href="#explore">Explore</a>
+                    <a href="#trips">Trips</a>
+                </nav>
+
+            </div>
+        </div>
+
+
+
+        <section id="landing-banner">
+            <div class="banner-bg"></div>
+            <div class="banner-creative"></div>
+            <div class="banner-overlay"></div>
+
+            <div class="banner-content">
+                <h1>Explore the colours <br> of the World</h1>
+                <p>Book your next Holiday with Aertrip</p>
+            </div>
+        </section>
+
+        <section id="latest-updates">
+            <div class="container">
+                <h2>Latest Updates</h2>
+                <div class="update-tabs">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="flight-deals">
+                            <div class="tab-icon">
+                                <img loading="lazy" src="./assets/images/flight-discounts-icon.webp"
+                                    alt="Flight Discounts">
+                            </div>
+                            <div class="tab-label">
+                                Flight discounts
+                            </div>
+                        </div>
+                        <div class="tab" data-tab="hotel-deals">
+                            <div class="tab-icon">
+                                <img loading="lazy" src="./assets/images/hotel-discounts-icon.webp"
+                                    alt="Hotel Discounts">
+                            </div>
+                            <div class="tab-label">
+                                Hotel discounts
+                            </div>
+                        </div>
+                        <div class="tab" data-tab="travel-deals">
+                            <div class="tab-icon">
+                                <img loading="lazy" src="./assets/images/open-to-travel-icon.webp" alt="Open to Travel">
+                            </div>
+                            <div class="tab-label">
+                                Open to travel
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-content">
+                        <div class="content-creative active" id="flight-deals">
+                            <img loading="lazy" src="./assets/images/flight-discounts-creative.webp"
+                                alt="Flight Discounts Creative">
+                        </div>
+                        <div class="content-creative" id="hotel-deals">
+                            <img loading="lazy" src="./assets/images/hotel-discounts-creative.webp"
+                                alt="Hotel Discounts Creative">
+                        </div>
+                        <div class="content-creative" id="travel-deals">
+                            <img loading="lazy" src="./assets/images/open-to-travel-creative.webp"
+                                alt="Open to Travel Creative">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="smart-search">
+            <div class="container">
+
+                <h2>Find the perfect flight <span> effortlessly </span> </h2>
+
+                <div class="smart-grid">
+
+                    <div class="smart-image">
+                        <img loading="lazy" src="./assets/images/flight-plane.webp" alt="Flight">
+                    </div>
+
+                    <div class="smart-content">
+                        <div class="slide active">
+                            <div class="slide-content">
+                                <h3>Aerin: A smarter way to search</h3>
+                                <p>
+                                    Talk or type in your natural language and enjoy a fast, fun and engaging experience.
+                                    Search and filter, all at one go.
+                                </p>
+                            </div>
+                            <div class="slide-content">
+                                <h3>Smart Sort: Your very own travel</h3>
+                                <p>
+                                    The most logical way to sort and display flights. The best flights appear on top so
+                                    you can identify and quote for flights much faster.
+                                </p>
+                            </div>
+                            <div class="slide-content">
+                                <h3>On-time performance</h3>
+                                <p>
+                                    Flight’s historical on-time performance - Displayed when it's most crucial.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Multiple airport search</h3>
+                                <p>
+                                    You can search for multiple airports at the same time.
+                                </p>
+                            </div>
+                            <div class="slide-content">
+                                <h3>Pinned Flights</h3>
+                                <p>
+                                    You can shortlist results by pinning them, so you can focus and compare. Easily
+                                    quote and share Pinned results.
+                                </p>
+                            </div>
+                            <div class="slide-content">
+                                <h3>Search by flight Number</h3>
+                                <p>
+                                    You can directly search for a flight number. You will see your flight pinned on top
+                                    with other results below.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./assets/js/style.js"></script>
+
+</body>
+
+</html>
