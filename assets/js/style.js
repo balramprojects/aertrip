@@ -130,9 +130,7 @@ smartContent.addEventListener('mouseenter', stopAutoSlide);
 smartContent.addEventListener('mouseleave', startAutoSlide);
 
 
-
-
-
+// Mobile Menu Toggle
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeMenu = document.querySelector('.close-menu');
@@ -151,16 +149,25 @@ function closeMenuFunc() {
 hamburger.addEventListener('click', openMenu);
 closeMenu.addEventListener('click', closeMenuFunc);
 
-/* Close menu & restore scroll on navigation */
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         closeMenuFunc();
     });
 });
 
-/* Safety: restore scroll on page load (if user navigates) */
 window.addEventListener('pageshow', () => {
     document.body.classList.remove('no-scroll');
 });
+
+
+// Set --vh CSS Variable for Viewport Height
+function setVH() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+setVH();
+window.addEventListener('resize', setVH);
+
 
 
