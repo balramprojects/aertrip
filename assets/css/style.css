@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Semibold.woff2') format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/SourceSansPro-Bold.woff2') format('woff2');
+    font-weight: 800;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: normal;
+    color: #000;
+    background: #fff;
+}
+
+body.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.35s ease, visibility 0.35s ease;
+    z-index: 10000;
+}
+
+header {
+    position: fixed;
+    inset: 0;
+    background-color: transparent;
+    color: #fff;
+    height: 57px;
+    z-index: 9;
+}
+
+header.scrolled {
+    background: rgb(0, 204, 153);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+header .container {
+    max-width: 1170px;
+    margin-inline: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .logo {
+    display: flex;
+}
+
+header .container .logo img {
+    height: 57px;
+    width: 100%;
+}
+
+header .container .header-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+header .container nav {
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container nav a,
+header .container .header-right a {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: #f6f6f6;
+    background: transparent;
+    padding: 10px 33px;
+    border-radius: 21px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+header .container nav a:hover,
+header .container nav a.active,
+header .container .header-right a:hover,
+header .container .header-right a.active {
+    background: rgba(255, 255, 255, 0.15);
+    transition: .5s;
+}
+
+header .container .header-right #account-settings {
+    display: flex;
+    margin-right: 17px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+header .container .header-right #account-settings img {
+    height: 100%;
+    width: 100%;
+}
+
+#landing-banner {
+    position: relative;
+    height: 100vh;
+    border-radius: 0 0 60px 60px;
+    overflow: hidden;
+}
+
+#landing-banner .banner-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../images/banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+#landing-banner .banner-creative {
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/banner-creative.webp');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: auto 84%;
+    background-position: 33% bottom;
+    will-change: transform;
+    z-index: 2;
+}
+
+#landing-banner .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 3;
+    pointer-events: none;
+}
+
+#landing-banner .banner-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+    z-index: 4;
+}
+
+#landing-banner .banner-content h1 {
+    font-size: 55px;
+    font-weight: 800;
+    margin: 0 0 6px;
+}
+
+#landing-banner .banner-content p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+#latest-updates .container {
+    max-width: 1080px;
+    margin-inline: auto;
+    padding: 50px 15px;
+}
+
+#latest-updates .container h2 {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: start;
+    color: #000;
+}
+
+#latest-updates .container .update-tabs {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 26px;
+}
+
+#latest-updates .container .update-tabs .tabs .tab {
+    width: 336px;
+    padding: 13px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 13px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#latest-updates .container .update-tabs .tabs .tab.active,
+#latest-updates .container .update-tabs .tabs .tab.active:hover {
+    background: rgba(0, 204, 153, 0.2);
+    transition: all .5s ease;
+}
+
+#latest-updates .container .update-tabs .tabs .tab:hover {
+    background: rgba(0, 0, 0, 0.04);
+    transition: all .5s ease;
+}
+
+#latest-updates .container .update-tabs .tabs .tab .tab-icon {
+    display: flex
+}
+
+#latest-updates .container .update-tabs .tabs .tab .tab-icon img {
+    height: 24px;
+    width: 24px;
+}
+
+#latest-updates .container .update-tabs .tabs .tab .tab-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+#latest-updates .container .update-tabs .tabs-content {
+    flex-grow: 1;
+}
+
+#latest-updates .container .update-tabs .tabs-content .content-creative {
+    display: none;
+}
+
+#latest-updates .container .update-tabs .tabs-content .content-creative.active {
+    display: block;
+}
+
+#latest-updates .container .update-tabs .tabs-content .content-creative img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#smart-search .container {
+    max-width: 1080px;
+    margin-inline: auto;
+    padding: 50px 15px;
+}
+
+#smart-search .container h2 {
+    text-align: center;
+    font-size: 55px;
+    font-weight: 800;
+    color: #2c3a4e;
+}
+
+#smart-search .container h2 span {
+    color: #00cc99;
+}
+
+#smart-search .container .smart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 26px;
+    margin-top: 26px;
+}
+
+#smart-search .container .smart-grid .smart-image {
+    display: flex;
+}
+
+#smart-search .container .smart-grid .smart-image img {
+    width: 100%;
+    height: 100%;
+}
+
+#smart-search .container .smart-grid .smart-content {
+    position: relative;
+    overflow: hidden;
+}
+
+#smart-search .container .smart-grid .smart-content .slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 26px;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    pointer-events: none;
+}
+
+#smart-search .container .smart-grid .smart-content .slide.active {
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+#smart-search .container .smart-grid .smart-content .slide .slide-content {
+    padding: 16px 0;
+}
+
+#smart-search .container .smart-grid .smart-content .slide .slide-content h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+#smart-search .container .smart-grid .smart-content .slide .slide-content p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 6px 0 0;
+}
+
+#smart-search .container .smart-grid .smart-content .dots {
+    display: flex;
+    gap: 16px;
+    margin-top: 26px;
+}
+
+#smart-search .container .smart-grid .smart-content .dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+#smart-search .container .smart-grid .smart-content .dots .dot.active {
+    width: 40px;
+    height: 10px;
+    border-radius: 6px;
+    background: #00cc99;
+}
