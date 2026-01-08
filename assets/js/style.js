@@ -138,12 +138,14 @@ const mobileLinks = document.querySelectorAll('.mobile-nav a');
 
 function openMenu() {
     mobileMenu.classList.add('open');
-    document.body.classList.add('no-scroll');
+    // document.body.classList.add('no-scroll');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeMenuFunc() {
     mobileMenu.classList.remove('open');
-    document.body.classList.remove('no-scroll');
+    // document.body.classList.remove('no-scroll');
+    document.body.style.overflow = 'scroll';
 }
 
 hamburger.addEventListener('click', openMenu);
@@ -155,9 +157,9 @@ mobileLinks.forEach(link => {
     });
 });
 
-window.addEventListener('pageshow', () => {
-    document.body.classList.remove('no-scroll');
-});
+// window.addEventListener('pageshow', () => {
+//     document.body.classList.remove('no-scroll');
+// });
 
 
 
