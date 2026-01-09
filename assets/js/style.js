@@ -138,13 +138,11 @@ const mobileLinks = document.querySelectorAll('.mobile-nav a');
 
 function openMenu() {
     mobileMenu.classList.add('open');
-    // document.body.classList.add('no-scroll');
     document.body.style.overflow = 'hidden';
 }
 
 function closeMenuFunc() {
     mobileMenu.classList.remove('open');
-    // document.body.classList.remove('no-scroll');
     document.body.style.overflow = 'scroll';
 }
 
@@ -156,10 +154,6 @@ mobileLinks.forEach(link => {
         closeMenuFunc();
     });
 });
-
-// window.addEventListener('pageshow', () => {
-//     document.body.classList.remove('no-scroll');
-// });
 
 
 
